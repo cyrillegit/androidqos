@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.androidqos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="6"
+        android:targetSdkVersion="7">
+    </uses-sdk>
+    
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+ 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+ 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>"
+ 	<uses-permission android:name="android.permission.INTERNET"></uses-permission> 
+ 	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"></uses-permission>
+ 	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+ 	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"></uses-permission>
+ 	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+ 	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+ 	<uses-permission android:name="android.permission.GET_TASKS"></uses-permission>
+ 	<uses-permission android:name="android.permission.REBOOT"></uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Startup"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name=".OnBootReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">"
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.HOME"></category>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".Wifireceiver"
+            android:permission="android.permission.CHANGE_WIFI_STATE">
+            <intent-filter>
+            </intent-filter>
+            
+        </receiver>
+        
+        <service android:name=".MainService"
+            android:label="Mainservice"
+            android:enabled="true"
+            android:exported="false">  
+            <intent-filter>
+                <action android:name="com.android.androidqos.MainService"></action>
+            </intent-filter>         
+        </service>
+        
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".CellActivity"></activity>
+        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".WifiActivity"></activity>
+        <activity android:name=".BatteryActivity"></activity>
+        <activity android:name=".DataActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        
+    </application>
+
+</manifest>

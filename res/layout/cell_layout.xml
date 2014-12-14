@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutGsm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/ImageButtonCellNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/next"
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonCellPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/imageViewGsm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageButtonCellNext"
+            android:layout_alignTop="@+id/ImageButtonCellNext"
+            android:layout_toRightOf="@+id/ImageButtonCellPrevious"
+            android:contentDescription="@string/gsm"
+            android:src="@drawable/h_device_access_network_cell" />
+
+        <TextView
+            android:id="@+id/textViewGsm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageButtonCellPrevious"
+            android:layout_alignTop="@+id/ImageButtonCellPrevious"
+            android:layout_toLeftOf="@+id/ImageButtonCellNext"
+            android:layout_toRightOf="@+id/imageViewGsm"
+            android:gravity="center"
+            android:text="@string/gsm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/RelativeLayoutGsm" >
+
+        <TextView
+            android:id="@+id/textViewIdCell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="@string/currentcell"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/textSizeTitle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/buttonCellHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/home" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutFoot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayoutTitle" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/textViewCid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/textViewLac"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/cid"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewLac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewMnc"
+                android:layout_below="@+id/textViewCid"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/lac"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewMnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewMcc"
+                android:layout_below="@+id/textViewLac"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/mnc"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewMcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewImsi"
+                android:layout_below="@+id/textViewMnc"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/mcc"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewImsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewImei"
+                android:layout_below="@+id/textViewMcc"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/imsi"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewImei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewSignalStrength"
+                android:layout_below="@+id/textViewImsi"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/imei"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewSignalStrength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewBitErrorRate"
+                android:layout_below="@+id/textViewImei"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/signalStrength"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewBitErrorRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewAndNum"
+                android:layout_below="@+id/textViewSignalStrength"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/bitErrorRate"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewOperatorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewBitErrorRate"
+                android:layout_below="@+id/textViewBitErrorRate"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/operatorName"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewAndNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewOperatorName"
+		        android:padding="5dp"
+		        android:gravity="right"
+		        android:text="@string/andnum"
+		        android:textSize="@dimen/textSizeCell" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewNetworkType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewAndNum"
+                android:layout_below="@+id/textViewAndNum"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/networkType"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeCell" />
+
+            <TextView
+                android:id="@+id/textViewCidValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewCid"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textViewCid"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewLacValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewLac"
+                android:layout_alignLeft="@+id/textViewCidValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewLac"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewMncValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMnc"
+                android:layout_alignLeft="@+id/textViewLacValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewMnc"
+ 		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewMccValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMcc"
+                android:layout_alignLeft="@+id/textViewMncValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewMcc"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewImsiValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewImsi"
+                android:layout_alignLeft="@+id/textViewMccValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewImsi"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewImeiValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewImei"
+                android:layout_alignLeft="@+id/textViewImsiValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewImei"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewSignalStrengthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewSignalStrength"
+                android:layout_alignLeft="@+id/textViewImeiValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewSignalStrength"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewBitErrorRateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewBitErrorRate"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewBitErrorRate"
+                android:layout_toRightOf="@+id/textViewBitErrorRate"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewOperatorNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewOperatorName"
+                android:layout_alignLeft="@+id/textViewBitErrorRateValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewOperatorName"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewAndNumValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewOperatorNameValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewAndNum"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewNetworkTypeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewNetworkType"
+                android:layout_alignLeft="@+id/textViewAndNumValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewNetworkType"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeCell"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+    </ScrollView>
+    
+ </RelativeLayout>

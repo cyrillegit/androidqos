@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">QoS Astellia</string> 
+  <string name="cid">CID  : </string> 
+  <string name="lac">LAC :</string> 
+  <string name="psc">PSC :</string> 
+  <string name="imsi">IMSI :</string> 
+  <string name="imei">IMEI :</string> 
+  <string name="latitude">Latitude :</string> 
+  <string name="longitude">Longitude :</string> 
+  <string name="altitude">Altitude :</string> 
+  <string name="andnum">Android Number :</string> 
+  <string name="gps">LOCATION</string> 
+  <string name="gsm">RADIO CELL</string> 
+  <string name="wifi">WIFI</string> 
+  <string name="battery">BATTERY</string> 
+  <string name="data">DATA</string> 
+  <string name="nbDataCollected">Number of data collected :</string> 
+  <string name="capMax">Maximum capacity :</string> 
+  <string name="settings">SETTINGS</string> 
+  <string name="storage">Storage :</string> 
+  <string name="sampleRate">Sample Rate :</string> 
+  <string name="close">Close</string> 
+  <string name="next">next</string> 
+  <string name="previous">previous</string> 
+  <string name="mnc">MNC:</string> 
+  <string name="mcc">MCC:</string> 
+  <string name="currentcell">Current cell ID </string> 
+  <string name="mobile">Mobile ID </string> 
+  <string name="mobileposition">Mobile location </string> 
+  <string name="hello">QoS</string> 
+  <string name="refresh">refresh</string> 
+  <string name="wifitext">Name|Addr Mac|Frequency|Level|capacity</string>
+  <string name="batterystatus">Battery Status</string>
+  <string name="level">Level : </string>
+  <string name="voltage">Voltage : </string>
+  <string name="temperature">Temperature : </string>
+  <string name="technology">Technology : </string>
+  <string name="status">Status : </string>
+  <string name="health">Health : </string>
+  <string name="nbDataSent">Number of data sent :</string>
+  <string name="levelTransfer">memory used in current storage device</string>
+  <string name="sendData">Send data : </string>
+  <string name="stopApp">Stop App when battery : </string>
+  <string name="home">Home</string>
+  <string name="signalStrength">Signal Strength : </string>
+  <string name="bitErrorRate">Bit Error Rate : </string>
+  <string name="operatorName">Operator Name : </string> 
+
+  <string name="storage_device">choose device</string>
+	<string-array name="device">
+	    <item>Mobile</item>
+	    <item>SD Card</item>
+	</string-array>
+  
+  
+  <string name="send_data">choose</string>
+      <string-array name="sendData">
+          <item>when wifi on</item>
+          <item>ask me</item>
+          <item>never</item>
+      </string-array>
+  
+  <string name="stop_app_battery">choose</string>
+      <string-array name="stopAppBattery">
+          <item>10 %</item>
+          <item>15 %</item>
+          <item>20 %</item>
+          <item>Never</item>
+      </string-array>
+      
+  <string name="sample_rate">choose sample rate</string>
+  <string-array name="sampleRate">
+      <item>10 s</item>
+      <item>20 s</item>
+      <item>30 s</item>
+      <item>40 s</item>
+      <item>50 s</item>
+      <item>60 s</item>
+  </string-array>
+  <string name="function">Activate/Desactivate function</string>
+  <string name="defaultbtn">Default</string>
+  <string name="mode">simulated operation mode</string>
+  <string name="speed">Speed :</string>
+  <string name="time">Time :</string>
+  <string name="apply">Apply</string>
+  <string name="cancel">Cancel</string>
+  <string name="accuracy">Accuracy :</string>
+  <string name="networkType">Network Type : </string>
+  <string name="provider">Provider :</string>
+  <string name="capacityUsed">Used capacity : </string>
+  <string name="dataInMobile">Data in Mobile memory :</string>
+  <string name="dataInSD">Data in SD Card :</string>
+  <string name="reset">reset</string>
+  <string name="delete">Delete</string>
+  <string name="clearAll">Clear All</string>
+  <string name="stopService">Stop App</string>
+  
+</resources>

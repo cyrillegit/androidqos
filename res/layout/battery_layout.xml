@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- Screen Design for BATTERY -->
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/ImageButtonBatteryNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/next"
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonBatteryPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/imageViewBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageButtonBatteryNext"
+            android:layout_toRightOf="@+id/ImageButtonBatteryPrevious"
+            android:contentDescription="@string/battery"
+            android:src="@drawable/x_device_access_battery" />
+
+        <TextView
+            android:id="@+id/textViewBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewBattery"
+            android:layout_alignTop="@+id/imageViewBattery"
+            android:layout_toLeftOf="@+id/ImageButtonBatteryNext"
+            android:layout_toRightOf="@+id/imageViewBattery"
+            android:gravity="center"
+            android:text="@string/battery"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/buttonBatteryHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/home" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/RelativeLayoutBattery" >
+        
+        <TextView
+        android:id="@+id/textViewBatteryStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayoutBattery"
+        android:layout_centerHorizontal="true"
+        android:text="@string/batterystatus"
+        android:textSize="@dimen/textSizeTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewBody"
+        android:fillViewport="true" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutFoot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayoutBody" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/textViewLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/textViewVoltage"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/level"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewVoltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewTemperature"
+                android:layout_below="@+id/textViewLevel"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/voltage"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewVoltage"
+		        android:gravity="right"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+		        android:text="@string/temperature"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewTechnology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewTemperature"
+                android:layout_below="@+id/textViewTemperature"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/technology"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewTechnology"
+                android:layout_below="@+id/textViewTechnology"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/status"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewStatus"
+                android:layout_below="@+id/textViewStatus"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/health"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewLevelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewVoltage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textViewLevel"
+                android:gravity="left"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeBattery" />
+
+            <TextView
+                android:id="@+id/textViewVoltageValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewTemperature"
+                android:layout_alignLeft="@+id/textViewLevelValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewVoltage"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewTemperatureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewTechnology"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewTemperature"
+                android:layout_toRightOf="@+id/textViewTemperature"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewTechnologyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewStatus"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewTechnology"
+                android:layout_toRightOf="@+id/textViewTechnology"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewStatusValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewHealth"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewStatus"
+                android:layout_toRightOf="@+id/textViewStatus"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewHealthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewHealth"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewHealth"
+                android:layout_toRightOf="@+id/textViewHealth"
+		        android:gravity="left"
+		        android:padding="5dp"
+		        android:textSize="@dimen/textSizeBattery"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

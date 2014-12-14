@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSizeBattery">14dp</dimen>
+    <dimen name="textSizeData">14dp</dimen>
+    <dimen name="textSizeCell">12dp</dimen>
+    <dimen name="textSizeLocation">14dp</dimen>
+    <dimen name="textSizeHome">12dp</dimen>
+    <dimen name="textSizeSettings">14dp</dimen>
+    <dimen name="textSizeWifi">14dp</dimen>
+    <dimen name="textSizeTitle">20dp</dimen>
+    <dimen name="textSizeCheckBox">12dp</dimen>
+    
+</resources>

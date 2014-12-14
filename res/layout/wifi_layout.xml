@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/ImageButtonWifiNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/next"
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonWifiPrevious"
+            android:contentDescription="@string/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/imageViewWifi"
+            android:contentDescription="@string/wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageButtonWifiNext"
+            android:layout_toRightOf="@+id/ImageButtonWifiPrevious"
+            android:src="@drawable/h_device_access_network_wifi" />
+
+
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewWifi"
+            android:layout_alignTop="@+id/imageViewWifi"
+            android:layout_toLeftOf="@+id/ImageButtonWifiNext"
+            android:layout_toRightOf="@+id/imageViewWifi"
+            android:text="@string/wifi"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/buttonWifiHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/home" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/RelativeLayoutWifi" >
+		        <TextView
+		        android:id="@+id/textViewWifi"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentRight="true"
+		        android:padding="2dp"
+		        android:gravity="center"
+		        android:layout_below="@+id/RelativeLayoutWifi"
+		        android:text="@string/wifitext"
+		        android:textSize="@dimen/textSizeWifi"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewWifiBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutFoot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayoutTitle" >
+		        
+		        <TextView
+		        android:id="@+id/textViewWifiDescription"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="@dimen/textSizeWifi" />
+
+    </ScrollView>
+
+</RelativeLayout>

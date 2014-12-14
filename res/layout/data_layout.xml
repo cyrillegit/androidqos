@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" 
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/imageButtonDataPrevious"
+            android:contentDescription="@string/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDataNext"
+            android:contentDescription="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageView
+            android:id="@+id/imageViewData"
+            android:contentDescription="@string/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonDataPrevious"
+            android:src="@drawable/x_device_access_storage" />
+
+
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewData"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonDataNext"
+            android:layout_toRightOf="@+id/imageViewData"
+            android:text="@string/data"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDataFoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/buttonDataHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/home" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDataTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/RelativeLayoutData" >
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewDataBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutDataFoot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayoutDataTitle" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutDataBody"
+            android:layout_width="fill_parent"
+            android:layout_height="297dp" >
+
+            <TextView
+                android:id="@+id/textViewNbDataCollected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+        		android:gravity="right"
+        		android:padding="5dp"
+        		android:text="@string/nbDataCollected"
+        		android:textSize="@dimen/textSizeData"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewNbDataSent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewNbDataCollected"
+                android:layout_below="@+id/textViewNbDataCollected"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/nbDataSent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeData" />
+
+            <TextView
+                android:id="@+id/textViewDataInMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewNbDataSent"
+                android:layout_below="@+id/textViewNbDataSent"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/dataInMobile"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeData" />
+
+            <TextView
+                android:id="@+id/textViewDataInSDCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewDataInMobile"
+                android:layout_below="@+id/textViewDataInMobile"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/dataInSD"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeData" />
+
+            <TextView
+                android:id="@+id/textViewMaximumCapacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewDataInSDCard"
+                android:layout_below="@+id/textViewDataInSDCard"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/capMax"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeData" />
+
+            <Button
+                android:id="@+id/buttonDataCollectedReset"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewNbDataCollected"
+                android:layout_alignLeft="@+id/buttonDataSentReset"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/reset" />
+
+            <Button
+                android:id="@+id/buttonDataSentReset"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewDataInMobile"
+                android:layout_alignLeft="@+id/buttonDataInMobile"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewNbDataSent"
+                android:text="@string/reset" />
+
+            <Button
+                android:id="@+id/buttonDataInMobile"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewDataInMobile"
+                android:layout_alignLeft="@+id/buttonDataInSDCard"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewDataInMobile"
+                android:text="@string/delete" />
+
+            <Button
+                android:id="@+id/buttonDataInSDCard"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewDataInSDCard"
+                android:layout_alignLeft="@+id/buttonClearAll"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewDataInSDCard"
+                android:text="@string/delete" />
+
+            <Button
+                android:id="@+id/buttonClearAll"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMaximumCapacity"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewMaximumCapacity"
+                android:text="@string/clearAll" />
+
+            <TextView
+                android:id="@+id/textViewNbDataCollectedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewNbDataSent"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/buttonDataCollectedReset"
+                android:layout_toRightOf="@+id/textViewNbDataCollected"
+        		android:gravity="left"
+        		android:padding="5dp"
+        		android:textSize="@dimen/textSizeData" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewNbDataSentValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewDataInMobile"
+                android:layout_alignTop="@+id/textViewNbDataSent"
+                android:layout_toLeftOf="@+id/buttonDataSentReset"
+                android:layout_toRightOf="@+id/textViewNbDataSent"
+        		android:gravity="left"
+        		android:padding="5dp"
+        		android:textSize="@dimen/textSizeData" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewDataInMobileValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewDataInSDCard"
+                android:layout_alignLeft="@+id/textViewNbDataSentValue"
+                android:layout_alignTop="@+id/textViewDataInMobile"
+                android:layout_toLeftOf="@+id/buttonDataInMobile"
+                android:gravity="left"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/textSizeData" />
+
+            <TextView
+                android:id="@+id/textViewDataInSDCardValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewMaximumCapacity"
+                android:layout_alignLeft="@+id/textViewDataInMobileValue"
+                android:layout_below="@+id/textViewDataInMobileValue"
+                android:layout_toLeftOf="@+id/buttonDataInSDCard"
+        		android:gravity="left"
+        		android:padding="5dp"
+        		android:textSize="@dimen/textSizeData" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewMaximumCapacityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMaximumCapacity"
+                android:layout_alignRight="@+id/textViewDataInSDCardValue"
+                android:layout_alignTop="@+id/textViewMaximumCapacity"
+                android:layout_toRightOf="@+id/textViewMaximumCapacity"
+        		android:gravity="left"
+        		android:padding="5dp"
+        		android:textSize="@dimen/textSizeData" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewLevelTranfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textViewMaximumCapacityValue"
+                android:layout_below="@+id/textViewMaximumCapacity"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/levelTransfer"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/textViewLevelTransferValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewLevelTranfer"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewLevelTranfer"
+                android:layout_toRightOf="@+id/textViewMaximumCapacityValue"
+        		android:gravity="left"
+        		android:padding="5dp"
+        		android:textSize="@dimen/textSizeData" 
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ProgressBar
+                android:id="@+id/progressBarLevel"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:max="100"
+        		android:padding="5dp" 
+                android:layout_below="@+id/textViewLevelTranfer" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <!-- Screen Design for GPS -->
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/ImageButtonGpsNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/next" 
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonGpsPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/previous" 
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/imageViewGps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageButtonGpsNext"
+            android:layout_alignTop="@+id/ImageButtonGpsNext"
+            android:layout_toRightOf="@+id/ImageButtonGpsPrevious"
+            android:contentDescription="@string/gps"
+            android:src="@drawable/h_device_access_location_searching" />
+
+
+
+        <TextView
+            android:id="@+id/textViewGps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageButtonGpsPrevious"
+            android:layout_alignTop="@+id/imageViewGps"
+            android:layout_toLeftOf="@+id/ImageButtonGpsNext"
+            android:layout_toRightOf="@+id/imageViewGps"
+            android:text="@string/gps"
+            android:gravity="center"
+            android:textSize="16dp" 
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayoutGps"
+        android:layout_centerHorizontal="true"
+        android:text="@string/mobileposition"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewPosition"
+        android:layout_marginTop="20dp"
+        android:text="@string/longitude"
+        android:gravity="right"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+
+    <TextView
+        android:id="@+id/textViewLong1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewLong"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewLong"
+        android:layout_toRightOf="@+id/textViewLong"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/textViewLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewLong"
+        android:layout_below="@+id/textViewLong"
+        android:text="@string/latitude"
+        android:gravity="right"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+    <TextView
+        android:id="@+id/textViewLat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewLat"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewLat"
+        android:layout_toRightOf="@+id/textViewLat"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/textViewAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewLat"
+        android:layout_below="@+id/textViewLat"
+        android:gravity="right"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:text="@string/altitude"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+    <TextView
+        android:id="@+id/textViewAlt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewAlt"
+        android:layout_alignLeft="@+id/textViewLat1"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewAlt"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewAlt"
+        android:layout_below="@+id/textViewAlt"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/speed"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeLocation" />
+
+    <TextView
+        android:id="@+id/textViewSpeedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewSpeed"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewSpeed"
+        android:layout_toRightOf="@+id/textViewSpeed"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewSpeed"
+        android:layout_below="@+id/textViewSpeed"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/time"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeLocation" />
+
+    <TextView
+        android:id="@+id/textViewTimeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewTime"
+        android:layout_toRightOf="@+id/textViewTime"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonGpsHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/home" />
+
+    <TextView
+        android:id="@+id/textViewAccuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewTime"
+        android:layout_below="@+id/textViewTime"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/accuracy"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeLocation" />
+
+    <TextView
+        android:id="@+id/textViewAccuracyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewAccuracy"
+        android:layout_alignLeft="@+id/textViewTimeValue"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewAccuracy"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewAccuracy"
+        android:layout_toLeftOf="@+id/textViewAccuracyValue"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/provider"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeLocation" />
+
+    <TextView
+        android:id="@+id/textViewProviderValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewProvider"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewProvider"
+        android:layout_toRightOf="@+id/textViewProvider"
+        android:gravity="left"
+        android:textSize="@dimen/textSizeLocation"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

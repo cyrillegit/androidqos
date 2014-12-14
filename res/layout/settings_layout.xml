@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+     <RelativeLayout
+        android:id="@+id/RelativeLayoutSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" 
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/imageButtonSettingsPrevious"
+            android:contentDescription="@string/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/navigation_previous_item" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettingsNext"
+            android:contentDescription="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/navigation_next_item" />
+
+        <ImageView
+            android:id="@+id/imageViewSettings"
+            android:contentDescription="@string/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButtonSettingsPrevious"
+            android:layout_toRightOf="@+id/imageButtonSettingsPrevious"
+            android:src="@drawable/x_action_settings" />
+
+
+
+        <TextView
+            android:id="@+id/textViewSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewSettings"
+            android:layout_alignTop="@+id/imageViewSettings"
+            android:layout_toLeftOf="@+id/imageButtonSettingsNext"
+            android:layout_toRightOf="@+id/imageViewSettings"
+            android:text="@string/settings"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/RelativeLayoutSettingsFoot"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true" >
+
+         <Button
+             android:id="@+id/buttonSettingsHome"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:text="@string/home" />
+
+         <Button
+             android:id="@+id/buttonSettingsCancel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:text="@string/cancel" />
+
+         <Button
+             android:id="@+id/buttonSettingsDefault"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/buttonSettingsCancel"
+             android:text="@string/defaultbtn" />
+
+         <Button
+             android:id="@+id/buttonSettingsApply"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/buttonSettingsDefault"
+             android:text="@string/apply" />
+
+         <Button
+             android:id="@+id/buttonStopApp"
+             android:textSize="12dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/buttonSettingsHome"
+             android:layout_alignParentTop="true"
+             android:layout_toLeftOf="@+id/buttonSettingsHome"
+             android:layout_toRightOf="@+id/buttonSettingsApply"
+             android:text="@string/stopService" />
+
+     </RelativeLayout>
+
+     <ScrollView
+         android:id="@+id/scrollView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/RelativeLayoutSettingsFoot"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/RelativeLayoutSettings" >
+         
+         <RelativeLayout 
+   			 android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textViewStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewSampleRate"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/storage"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeSettings" />
+
+    <Spinner
+        android:id="@+id/spinnerStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewStorage"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewStorage"
+        android:layout_toRightOf="@+id/textViewSampleRate"
+        android:entries="@array/device"
+        android:prompt="@string/storage_device" />
+
+    <TextView
+        android:id="@+id/textViewSampleRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewStorage"
+        android:text="@string/sampleRate"
+        android:gravity="right"
+        android:textSize="@dimen/textSizeSettings"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/textViewSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewSampleRate"
+        android:layout_below="@+id/textViewSampleRate"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/sendData"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSizeSettings" />
+
+
+
+
+    <Spinner
+        android:id="@+id/spinnerSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewSendData"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewSendData"
+        android:layout_toRightOf="@+id/textViewSampleRate"
+        android:entries="@array/sendData"
+        android:prompt="@string/send_data" />
+
+    <TextView
+        android:id="@+id/textViewStopApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewSendData"
+        android:text="@string/stopApp"
+        android:gravity="right"
+        android:padding="5dp"
+        android:textSize="@dimen/textSizeSettings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+
+    <Spinner
+        android:id="@+id/spinnerStopApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewStopApp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewStopApp"
+        android:layout_toRightOf="@+id/textViewStopApp"
+        android:entries="@array/stopAppBattery"
+        android:prompt="@string/stop_app_battery" />
+
+
+
+    <Spinner
+        android:id="@+id/spinnerSampleRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerSendData"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinnerStorage"
+        android:layout_toRightOf="@+id/textViewSampleRate" />
+
+
+    <TextView
+        android:id="@+id/textViewFunction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewStopApp"
+        android:text="@string/function"
+        android:textSize="@dimen/textSizeSettings"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:checked="true"
+        android:textSize="@dimen/textSizeCheckBox"
+        android:layout_below="@+id/textViewFunction"
+        android:text="@string/gsm" />
+
+
+
+    <CheckBox
+        android:id="@+id/checkBoxGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textSize="@dimen/textSizeCheckBox"
+        android:layout_alignBottom="@+id/checkBoxCell"
+        android:layout_alignTop="@+id/checkBoxCell"
+        android:layout_toRightOf="@+id/checkBoxCell"
+        android:text="@string/gps" />
+
+
+
+    <CheckBox
+        android:id="@+id/checkBoxWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textSize="@dimen/textSizeCheckBox"
+        android:layout_alignBottom="@+id/checkBoxGps"
+        android:layout_alignTop="@+id/checkBoxGps"
+        android:layout_toRightOf="@+id/checkBoxGps"
+        android:text="@string/wifi" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:checked="true"
+        android:textSize="@dimen/textSizeCheckBox"
+        android:layout_below="@+id/checkBoxCell"
+        android:text="@string/mode" />
+
+</RelativeLayout>
+         
+     </ScrollView>
+
+</RelativeLayout>
